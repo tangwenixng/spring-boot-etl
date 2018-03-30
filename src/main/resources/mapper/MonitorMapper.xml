@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.twx.db.MonitorMapper">
+
+    <resultMap id="warnEntityMap" type="WarnEntity">
+
+    </resultMap>
+
+    <select id="query" parameterType="com.twx.db.param.MonitorQueryParam" resultType="WarnEntity">
+        SELECT j.JobMasterID as jobMasterId,
+            w.WarningTitle as warningTitle,
+            w.WarningType as warningType,
+            j.IsActivated as isActivated
+        FROM WarningTemplate w INNER join JobMaster j ON w.WarningCode = j.WarningCode
+        WHERE WarningTitle LIKE #{warningTitle}
+        AND w.WarningType in
+        <foreach collection="warningTypes" item="type" open="(" close=")" separator=",">
+            #{type}
+        </foreach>
+        AND j.IsActivated in
+        <foreach collection="activateLists" item="activate" open="(" close=")" separator=",">
+            #{activate}
+        </foreach>
+        ORDER BY j.JobMasterID OFFSET #{offset} ROWS FETCH NEXT #{size} ROWS ONLY
+    </select>
+
+
+    <!--无参-->
+    <select id="querySummary" resultType="java.util.Map">
+        SELECT w.WarningType AS warningType, CONVERT(varchar(16),h.LastUpdateTime,111) AS date,COUNT(*) AS count
+         FROM [dbo].[BusinessWarningRequest] w
+         INNER JOIN [dbo].[BatchState] h ON w.BatchID = h.BatchID
+         WHERE CONVERT(varchar(16),h.LastUpdateTime,111) &lt;= convert(varchar(16),getdate(),111)
+        and  CONVERT(varchar(16),h.LastUpdateTime,111) &gt;= convert(varchar(16),getdate()-7,111)
+        GROUP BY w.WarningType, CONVERT(varchar(16),h.LastUpdateTime,111) order by w.WarningType
+    </select>
+
+</mapper>

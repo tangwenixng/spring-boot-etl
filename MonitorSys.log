@@ -1,0 +1,47 @@
+10:51:01.017 ETL [restartedMain] INFO  com.twx.SpringBootEtlApplication - Starting SpringBootEtlApplication on LAPTOP-4UGT3NRH with PID 4984 (E:\workspace\gitlab\spring-boot-etl\target\classes started by soyuan-twx in E:\workspace\gitlab\spring-boot-etl)
+10:51:01.018 ETL [restartedMain] INFO  com.twx.SpringBootEtlApplication - No active profile set, falling back to default profiles: default
+10:51:01.215 ETL [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d46ac28: startup date [Mon Mar 19 10:51:01 CST 2018]; root of context hierarchy
+10:51:01.291 ETL [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.3.5.Final
+10:51:02.729 ETL [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$948332d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10:51:03.262 ETL [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+10:51:03.274 ETL [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+10:51:03.276 ETL [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+10:51:03.590 ETL [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/warn] - Initializing Spring embedded WebApplicationContext
+10:51:03.591 ETL [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2376 ms
+10:51:03.804 ETL [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+10:51:03.808 ETL [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+10:51:03.809 ETL [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10:51:03.809 ETL [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10:51:03.809 ETL [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+10:51:03.879 ETL [restartedMain] WARN  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowired annotation should only be used on methods with parameters: public com.twx.VO.ResultVO com.twx.controller.APIController.dashbord()
+10:51:04.191 ETL [restartedMain] INFO  com.twx.controller.APIController - ¡¾½øÈëÊ×Ò³¡¿....
+10:51:05.593 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/save],methods=[POST],consumes=[application/json]}" onto public com.twx.VO.ResultVO com.twx.controller.APIController.save(com.twx.VO.EditVO)
+10:51:05.594 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/query],methods=[POST]}" onto public com.twx.VO.ResultVO<java.util.Map<java.lang.String, java.lang.Object>> com.twx.controller.APIController.query(java.lang.String,java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.Integer)
+10:51:05.595 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/edit],methods=[GET]}" onto public com.twx.VO.ResultVO<com.twx.VO.EditVO> com.twx.controller.APIController.edit(java.lang.Integer)
+10:51:05.595 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/dashbord],methods=[GET]}" onto public com.twx.VO.ResultVO<java.util.Map<java.lang.String, java.lang.Object>> com.twx.controller.APIController.dashbord()
+10:51:05.596 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+10:51:05.600 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+10:51:05.602 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+10:51:05.603 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+10:51:05.607 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10:51:05.608 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10:51:05.973 ETL [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d46ac28: startup date [Mon Mar 19 10:51:01 CST 2018]; root of context hierarchy
+10:51:06.047 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/home] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+10:51:06.048 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+10:51:06.048 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/hello] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+10:51:06.048 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/login] onto handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+10:51:06.059 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:06.060 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:06.086 ETL [restartedMain] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in frontExceptionHandler
+10:51:06.113 ETL [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10:51:06.697 ETL [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+10:51:06.746 ETL [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+10:51:06.757 ETL [restartedMain] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 2147483647
+10:51:06.757 ETL [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+10:51:06.890 ETL [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+10:51:06.904 ETL [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+10:51:07.148 ETL [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+10:51:07.160 ETL [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+10:51:07.179 ETL [restartedMain] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+10:51:07.212 ETL [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+10:51:07.218 ETL [restartedMain] INFO  com.twx.SpringBootEtlApplication - Started SpringBootEtlApplication in 6.59 seconds (JVM running for 7.066)

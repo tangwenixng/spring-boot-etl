@@ -7,7 +7,7 @@
     <!--默认上下文名称为“default”-->
     <contextName>ETL</contextName>
     <!--通过定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量-->
-    <property name="log.path" value="E:/spring-log/file.log" />
+    <property name="log.path" value="logs/MonitorSys.log" />
     <!--输出到控制台-->
     <!--class用来指定哪种输出策略，常用就是控制台输出策略和文件输出策略。-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
@@ -46,6 +46,7 @@
     <!--控制controller包下的所有类的日志的打印，但是并没用设置打印级别，所以继承他的上级的日志级别“info”；-->
     <!--没有设置appender，此logger本身不打印任何信息-->
     <logger name="com.twx.controller" level="DEBUG"/>
+    <!--<logger name="com.twx.db" level="trace" />-->
     <!--logback.LogbackDemo：类的全路径 -->
     <!--addtivity:是否向上级logger传递打印信息;默认为true-->
     <!--<logger name="com.twx.controller.HomeController" level="TRACE" additivity="false">-->

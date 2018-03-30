@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://172.26.1.4:1433;databaseName=MWBS_Demo4
+    username: sa
+    password: Pass2017
+  jackson:
+    default-property-inclusion: non_null
+  thymeleaf:
+    cache: false
+
+sevs:
+  pushExUrl: http://localhost:61814/api/services/app/etl/PushExaminationData
+  pushAcUrl: http://localhost:61814/api/services/app/etl/PushActionData
+  indexUrl: http://localhost:61814/
+
+server:
+  context-path: /warn
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.twx.entity
+
